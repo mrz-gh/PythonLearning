@@ -6,29 +6,25 @@ import time
 import timeit
 
 def Swap1 ():
-    P = 203 
-    Q = 204
+    a = 203
+    b = 204
     
-    # To Swap the values of two variables using XOR  
-    return P > Q
+    # Perform the swap using XOR operations
+    a = a ^ b
+    b = a ^ b
+    a = a ^ b
     
-    #print ("The Value of P after swapping: ", P)  
-    #print ("The Value of Q after swapping: ", Q)  
 
 def Swap2():
     P = 203 
     Q = 204
-    
-    # To Swap the values of two variables using XOR  
+
     # To swap the value of two variables  
     # we will user third variable which is a temporary variable  
     temp = Q
     Q = P
     P = temp
-   
-    
-    # ("The Value of P after swapping: ", P)  
-    #print ("The Value of Q after swapping: ", Q)  
+
 
 
 def Swap3(): 
@@ -42,10 +38,11 @@ def Swap3():
 
 
 if __name__ == "__main__":
-    start = time.process_time()
-    Swap2()
-    end = time.process_time()
-    ms = (end-start) * 1e06
-    result = timeit.timeit(stmt='Swap2()', globals=globals(), number=10000000)
-    print(f"Elapsed {result:.03f} micro secs.")
+    # Comparison of Algorithms
+    swapAlgorithms = [Swap1, Swap2, Swap3]
+    for swap in swapAlgorithms:
+        # Executing each swap algorithms for 1e6 times \
+        # and calculate each algorithm execution time
+        result = timeit.timeit(stmt='swap()', globals=globals(), number=1e6)
+        print(f"Elapsed {result:.03f} micro secs.")
     
