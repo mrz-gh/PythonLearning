@@ -34,9 +34,9 @@ if __name__ == "__main__":
     # Comparison of Algorithms
     swapAlgorithms = [Swap1, Swap2, Swap3]
     for swap in swapAlgorithms:
-        # Executing each swap algorithms for 1e6 times \
+        # Executing each swap algorithms for 1 million times \
         # and calculate each algorithm execution time
-        result = timeit.timeit(stmt='swap()', globals=globals(), number=1e6)
+        result = timeit.timeit(stmt='swap()', globals=globals(), number=1000000)
         print(f"Elapsed {result:.03f} micro secs.")
     
     pass
