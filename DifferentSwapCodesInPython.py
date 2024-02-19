@@ -1,8 +1,3 @@
-
-from typing import Any
-# import numpy as np
-import math
-import time
 import timeit
 
 def Swap1 ():
@@ -34,7 +29,7 @@ def Swap3():
     P, Q = Q, P  
 
 # Swap3 and Swap2 are similar, but they are better than Swap1
-# In python for swap function, we use just Swap3
+
 
 
 if __name__ == "__main__":
@@ -46,3 +41,7 @@ if __name__ == "__main__":
         result = timeit.timeit(stmt='swap()', globals=globals(), number=1e6)
         print(f"Elapsed {result:.03f} micro secs.")
     
+    pass
+
+# If you run the code, you will figure out that \
+# in python for swap function, Swap3 algorithm is better that other two.
