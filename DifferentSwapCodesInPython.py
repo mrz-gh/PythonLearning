@@ -28,8 +28,6 @@ def Swap3():
 
     P, Q = Q, P  
 
-# Swap3 and Swap2 are similar, but they are better than Swap1
-
 
 
 if __name__ == "__main__":
